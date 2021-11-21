@@ -38,7 +38,7 @@ bold=$(tput bold); reset=$(tput sgr0);
 # Green & Purple
 PS1="\[${purple}\]\u";
 PS1+="\[${gray}\] at \[${green}\]\h";
-PS1+="\[${bold}${gray}\] in ";
+PS1+="\[${gray}\] in ";
 PS1+="\[${reset}${straw}\]\w\n";
 PS1+="\[${reset}${gray}\]-> ";
 PS1+="\[${reset}\]";
