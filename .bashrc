@@ -24,15 +24,6 @@ export EDITOR="$VISUAL"
 # Set Vi mode in bash
 set -o vi
 
-# Set display port for Xming and gtkwave
-#export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
-
-# Show git branch name in the prompt
-# if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-#     GIT_PROMPT_ONLY_IN_REPO=1
-#     source $HOME/.bash-git-prompt/gitprompt.sh
-# fi
-
 # ===============================================================================================
 export TERM=xterm-256color
 # Place New Colors for prompt here!!
