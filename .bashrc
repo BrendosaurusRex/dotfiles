@@ -32,9 +32,6 @@ blue=$(tput setaf 27); white=$(tput setaf 255); purple=$(tput setaf 97); yellow=
 gray=$(tput setaf 248); orange=$(tput setaf 166); pink=$(tput setaf 199); sky=$(tput setaf 75);
 crimson=$(tput setaf 88); scarlet=$(tput setaf 124);
 
-#black=$(tput setaf 0);  green=$(tput setaf 2); mustard=$(tput setaf 3);
-#black=$(tput setaf 0); red=$(tput setaf 1); green=$(tput setaf 2); mustard=$(tput setaf 3);
-
 bold=$(tput bold); reset=$(tput sgr0);
 # ===============================================================================================
 
