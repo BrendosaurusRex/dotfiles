@@ -1,0 +1,79 @@
+"    _   __(_)___ ___  __________
+"   | | / / / __ `__ \/ ___/ ___/
+"   | |/ / / / / / / / /  / /__
+" (_)___/_/_/ /_/ /_/_/   \___/
+
+" Plugins =====================================================================
+call plug#begin()
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'francoiscabrol/ranger.vim'
+call plug#end()
+
+" Basic setup:
+	set nocompatible
+	syntax on
+	colorscheme brendon
+    filetype plugin indent on
+	set tabstop=4 softtabstop=4 shiftwidth=4
+	set autoindent smartindent expandtab
+	set number relativenumber
+	set incsearch nohlsearch ignorecase smartcase
+	set path+=** hidden noswapfile
+	set wildmode=longest,list,full
+	set scrolloff=5 nowrap
+
+" Automatically delete trailing whitespace on save
+	autocmd BufWritePre * %s/\s\+$//e
+
+" Custom Commands
+	command! MakeTags !ctags -R .
+
+" Window settings and remaps
+	set splitright splitbelow
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
+
+" General Remaps
+	let mapleader=" "
+
+" System Clipboard settings
+    noremap <Leader>y "*y
+    noremap <Leader>p "*p
+    noremap <Leader>Y "+y
+    noremap <Leader>P "+p
+
+
+""" Ranger Configurations =====================================================
+    let g:ranger_replace_netrw = 1
+
+
+""" vim-airline Configurations ================================================
+	let g:airline_theme='deus'
+
+
+""" VHDL Configurations =======================================================
+
+" Whitespace Configs
+    au FileType vhdl :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    au FileType vhdl :setlocal commentstring=--\ %s
+
+" Snippets
+    au FileType vhdl nnoremap ,vhdl :-1read $HOME/.vim/snippets/.skeleton_vhdl.vhd<CR>zz:%s/<name>//g<Left><Left>
+    au FileType vhdl nnoremap ,tb   :-1read $HOME/.vim/snippets/.skeleton_testbench.vhd<CR>zz:%s/<name>//g<Left><Left>
+    au FileType vhdl nnoremap ,proc :-1read $HOME/.vim/snippets/.skeleton_process.vhd<CR>zz:%s/<name>//g<Left><Left>
+
+" Compiler
+    au FileType vhdl :comp ghdl
+
+
+""" PSL =======================================================================
+    au BufRead,BufNewFile *.psl :set ft=psl
+    au FileType psl :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    au FileType psl :setlocal commentstring=--\ %s
+
