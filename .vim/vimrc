@@ -3,16 +3,6 @@
 "   | |/ / / / / / / / /  / /__
 " (_)___/_/_/ /_/ /_/_/   \___/
 
-" Plugins =====================================================================
-call plug#begin()
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'francoiscabrol/ranger.vim'
-call plug#end()
-
 " Basic setup:
 	set nocompatible
 	syntax on
@@ -76,4 +66,20 @@ call plug#end()
     au BufRead,BufNewFile *.psl :set ft=psl
     au FileType psl :setlocal tabstop=2 softtabstop=2 shiftwidth=2
     au FileType psl :setlocal commentstring=--\ %s
+
+" Plugins =====================================================================
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+call plug#begin()
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'francoiscabrol/ranger.vim'
+call plug#end()
 
