@@ -9,7 +9,7 @@
 alias update="sudo apt update && sudo apt upgrade -y"
 alias v=vim
 alias g=git
-alias config='/usr/bin/git --git-dir=/home/bren/dotfiles/ --work-tree=/home/bren'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 alias la="ls -hlA"
 alias ll='ls -alF'

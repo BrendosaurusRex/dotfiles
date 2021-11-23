@@ -24,6 +24,9 @@ export EDITOR="$VISUAL"
 # Set Vi mode in bash
 set -o vi
 
+# Set display port for Xming and gtkwave
+export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
+
 # ===============================================================================================
 export TERM=xterm-256color
 # Place New Colors for prompt here!!
@@ -36,7 +39,7 @@ bold=$(tput bold); reset=$(tput sgr0);
 # ===============================================================================================
 
 # Green & Purple
-PS1="\[${purple}\]\u";
+PS1="\[${purple}\]Brendon";
 PS1+="\[${gray}\] at \[${green}\]\h";
 PS1+="\[${gray}\] in ";
 PS1+="\[${reset}${straw}\]\w\n";
