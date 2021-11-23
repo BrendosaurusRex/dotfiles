@@ -6,9 +6,9 @@
 # |____(_)_|  \_(_)___(_)
 
 #      __            __
-#     / /  ___ ____ / /  ________
+#     / /  ___  ___ / /  ________
 #  _ / _ \/ _ `(_-</ _ \/ __/ __/
-# (_)_.__/\_,_/___/_//_/_/  \__/
+# (_)_,__/\_,_/___/_//_/_/  \__/
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
