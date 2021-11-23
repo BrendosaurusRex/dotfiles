@@ -24,9 +24,6 @@ export EDITOR="$VISUAL"
 # Set Vi mode in bash
 set -o vi
 
-# Set display port for Xming and gtkwave
-export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
-
 # Disable Ctrl-S and Ctrl-Q (pauses screen)
 stty -ixon
 
