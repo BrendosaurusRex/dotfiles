@@ -19,9 +19,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias print256colors="~/print256colors.sh"
-alias p256="~/print256colors.sh"
-
 # ----------------------------------------------------------------------------------------
 # From default .bashrc:
 
