@@ -7,7 +7,7 @@
 # ---------------------------------------------------------------------------------------------------
 
 alias update="sudo apt update && sudo apt upgrade -y"
-alias clean="sudo apt autoremove --purge && sudo apt clean"
+alias clean="sudo apt autoremove --purge && sudo apt autoclean"
 alias v=vim
 alias g=git
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
