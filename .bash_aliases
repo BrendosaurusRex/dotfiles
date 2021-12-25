@@ -6,7 +6,7 @@
 #                         /_____/
 # ---------------------------------------------------------------------------------------------------
 
-alias update="sudo apt update && sudo apt upgrade -y"
+alias update="sudo apt update && sudo apt dist-upgrade -y"
 alias clean="sudo apt autoremove --purge && sudo apt clean"
 alias v=vim
 alias g=git
