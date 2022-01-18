@@ -4,33 +4,33 @@
 " (_)___/_/_/ /_/ /_/_/   \___/
 
 " Basic setup:
-	set nocompatible
-	syntax on
-	colorscheme brendon
+    set nocompatible
+    syntax on
+    colorscheme brendon
     filetype plugin indent on
-	set tabstop=4 softtabstop=4 shiftwidth=4
-	set autoindent smartindent expandtab
-	set number relativenumber
-	set incsearch nohlsearch ignorecase smartcase
-	set path+=** hidden noswapfile
-	set wildmode=longest,list,full
-	set scrolloff=5 nowrap
+    set tabstop=4 softtabstop=4 shiftwidth=4
+    set autoindent smartindent expandtab
+    set number relativenumber
+    set incsearch nohlsearch ignorecase smartcase
+    set path+=** hidden noswapfile
+    set wildmode=longest,list,full
+    set scrolloff=5 nowrap
 
 " Automatically delete trailing whitespace on save
-	autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufWritePre * %s/\s\+$//e
 
 " Custom Commands
-	command! MakeTags !ctags -R .
+    command! MakeTags !ctags -R .
 
 " Window settings and remaps
-	set splitright splitbelow
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
+    set splitright splitbelow
+    map <C-h> <C-w>h
+    map <C-j> <C-w>j
+    map <C-k> <C-w>k
+    map <C-l> <C-w>l
 
 " General Remaps
-	let mapleader=" "
+    let mapleader=" "
 
 " System Clipboard settings
     noremap <Leader>y "*y
@@ -44,7 +44,7 @@
 
 
 """ vim-airline Configurations ================================================
-	let g:airline_theme='deus'
+    let g:airline_theme='deus'
 
 
 """ VHDL Configurations =======================================================
@@ -69,10 +69,10 @@
 
 " Plugins =====================================================================
 " Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
+    if empty(glob('~/.vim/autoload/plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    endif
 
 call plug#begin()
 Plug 'dense-analysis/ale'
