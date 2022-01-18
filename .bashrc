@@ -50,14 +50,13 @@ crimson=$(tput setaf 88); scarlet=$(tput setaf 124);
 bold=$(tput bold); reset=$(tput sgr0);
 # ===============================================================================================
 
-# Green & Purple
-PS1="\[${purple}\]\u";
-PS1+="\[${gray}\] at \[${green}\]\h";
-PS1+="\[${gray}\] in ";
-PS1+="\[${reset}${straw}\]\w\n";
-PS1+="\[${reset}${gray}\]-> ";
+# Superman
+PS1="\[${red}\]\u";
+PS1+="\[${reset}\] at \[${blue}\]\h";
+PS1+="\[${reset}\] in ";
+PS1+="\[${yellow}\]\w\n";
+PS1+="\[${reset}\]$ ";
 PS1+="\[${reset}\]";
-
 export PS1;
 
 # ===============================================================================================
