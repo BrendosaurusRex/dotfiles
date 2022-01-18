@@ -6,11 +6,13 @@
 #                         /_____/
 # ---------------------------------------------------------------------------------------------------
 
-alias update="sudo apt update && sudo apt upgrade -y"
-alias clean="sudo apt autoremove --purge && sudo apt clean"
+alias s=systemctl
+alias j="journalctl -xe"
 alias v=vim
 alias g=git
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias update="sudo apt update && sudo apt upgrade -y"
+alias clean="sudo apt autoremove --purge && sudo apt clean"
 
 alias la="ls -hlA"
 alias ll='ls -alF'
@@ -31,6 +33,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
