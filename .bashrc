@@ -38,7 +38,6 @@ export EDITOR="$VISUAL"
 
 # Set Vi mode in bash
 set -o vi
-setxkbmap -option "ctrl:swapcaps"   # the must-have remap
 
 # ===============================================================================================
 export TERM=xterm-256color
