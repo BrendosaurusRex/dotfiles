@@ -38,6 +38,7 @@ export EDITOR="$VISUAL"
 
 # Set Vi mode in bash
 set -o vi
+neofetch
 
 # ===============================================================================================
 export TERM=xterm-256color
