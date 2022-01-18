@@ -115,59 +115,17 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# ===============================================================================================
-# Place New Colors for prompt here!!
-black=$(tput setaf 0); red=$(tput setaf 1); green=$(tput setaf 2); straw=$(tput setaf 3);
-blue=$(tput setaf 27); white=$(tput setaf 255); purple=$(tput setaf 97); yellow=$(tput setaf 226);
-gray=$(tput setaf 248); orange=$(tput setaf 166); pink=$(tput setaf 199); sky=$(tput setaf 75);
-crimson=$(tput setaf 88); scarlet=$(tput setaf 124);
-
-#black=$(tput setaf 0);  green=$(tput setaf 2); mustard=$(tput setaf 3);
-#black=$(tput setaf 0); red=$(tput setaf 1); green=$(tput setaf 2); mustard=$(tput setaf 3);
-
-bold=$(tput bold); reset=$(tput sgr0);
-# ===============================================================================================
-
-#if [ "$color_prompt" = yes ]; then
-#    # Superman Theme
-#    # PS1="\[${scarlet}\]\u";
-#    # PS1+="\[${white}\] @ ";
-#    # PS1+="\[${blue}\]\h";
-#    # PS1+="\[${white}\]\[${bold}\]:";
-#    # PS1+="\[${reset}${yellow}\]\w\n";
-#    # PS1+="\[${reset}\]-> ";
-#
-#
-#    # Green & Purple
-#    PS1="\[${purple}\]Brendon";
-#    PS1+="\[${gray}\] at \[${green}\]Work";
-#    PS1+="\[${bold}${gray}\] in ";
-#    PS1+="\[${reset}${straw}\]\w";
-#    PS1+="\[${sky}\] $(__git_ps1 "(%s)")\n";
-#    PS1+="\[${reset}${gray}\]-> ";
-#    PS1+="\[${reset}\]";
-#
-#    export PS1;
-#
 ## Original setting:
 ##  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #
 #else
 #    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 #fi
+
 unset force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
