@@ -13,6 +13,7 @@ alias g=git
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias ino=arduino-cli
 alias ydl=youtube-dl
+alias py=python3
 
 alias la="ls -hlA"
 alias ll='ls -alF'
