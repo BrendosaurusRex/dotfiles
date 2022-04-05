@@ -67,6 +67,13 @@
     au FileType psl :setlocal tabstop=2 softtabstop=2 shiftwidth=2
     au FileType psl :setlocal commentstring=--\ %s
 
+
+""" C =========================================================================
+    au FileType c :setlocal commentstring=//\ %s
+    au FileType cpp :setlocal commentstring=//\ %s
+    au FileType arduino :setlocal commentstring=//\ %s
+
+
 " Plugins =====================================================================
 " Install vim-plug if not found
     if empty(glob('~/.vim/autoload/plug.vim'))
