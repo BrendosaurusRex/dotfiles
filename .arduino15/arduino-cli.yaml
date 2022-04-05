@@ -9,7 +9,7 @@ directories:
   downloads: /home/bren/.arduino15/staging
   user: /home/bren/Arduino
 library:
-  enable_unsafe_install: false
+  enable_unsafe_install: true
 logging:
   file: ""
   format: text
